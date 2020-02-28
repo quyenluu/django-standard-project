@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/my-login.css' %}">
+{% endblock %}
+
+{% block title %}
+    Đăng nhập
+{% endblock %}
+
+{% block body %}
+    <div id="main-wrapper">
+        <div class="container-fluid">
+            <section id="wrapper">
+                <div class="login-register">
+                    <div class="login-box card">
+                        <div class="card-body">
+                            <form class="form-horizontal form-control-line" method="post" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                <a href="javascript:void(0)" class="text-center db"><img src="{% static 'images/logo.svg' %}" alt="Logo"></a>
+                                <h4 class="mt-4 text-center font-weight-bold text-uppercase" style="color: #0066b2;">
+                                    Quản lý Thẻ quà tặng cho KH HV SCB Premier
+                                </h4>
+                                <div class="form-group row m-t-40">
+                                    <div class="col-12 my-position-relative">
+                                        <i class="fa fa-user my-icon"></i>
+                                        <input type="text" name="username" placeholder="Tên đăng nhập" class="form-control my-input" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 my-position-relative">
+                                        <i class="fa fa-key my-icon"></i>
+                                        <input type="password" name="password" placeholder="Mật khẩu" class="form-control my-input" />
+                                    </div>
+                                </div>
+                                <div class="form-group text-center m-t-30">
+                                    <div class="col-xs-12">
+                                        <button type="submit" class="btn btn-danger btn-md btn-block text-uppercase waves-effect waves-light">
+                                            Đăng nhập
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

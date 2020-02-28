@@ -1,0 +1,26 @@
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #263238;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+table tr th {
+    text-align: center;
+    font-size: 14px;
+}
+
+table tr td {
+    font-size: 13px;
+}
+
+label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.my-table-th {
+    white-space: normal !important;
+    min-width: 130px;
+}
